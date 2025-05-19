@@ -36,11 +36,11 @@
                       <i class="nc-icon nc-book-bookmark"></i> SERVICIOS
                     </a>
                     <div class="dropdown-menu" ngbDropdownMenu>
-                      <a class="dropdown-item" ngbDropdownItem href="#">FORMATOS</a>
-                      <a class="dropdown-item" ngbDropdownItem href="#">POLÍTICAS</a>
-                      <a class="dropdown-item" ngbDropdownItem href="#">CRÉDITOS</a>
+                      <a class="dropdown-item" ngbDropdownItem routerLink="/formatos">FORMATOS</a>
+                      <a class="dropdown-item" ngbDropdownItem routerLink="/politicas">POLÍTICAS</a>
+                      <a class="dropdown-item" ngbDropdownItem routerLink="/creditos">CRÉDITOS</a>
                       <a class="dropdown-item" ngbDropdownItem href="#">EDUCACIÓN</a>
-                      <a class="dropdown-item" ngbDropdownItem href="#">TURISMO</a>
+                      <a class="dropdown-item" ngbDropdownItem routerLink="/turismo">TURISMO</a>
                       <a class="dropdown-item" ngbDropdownItem href="#">CONVENIOS</a>
                       <a class="dropdown-item" ngbDropdownItem href="#">SEGUROS</a>
                       <a class="dropdown-item" ngbDropdownItem href="#">AUXILIOS</a>
@@ -52,15 +52,15 @@
                       <i class="nc-icon nc-book-bookmark"></i> EN LÍNEA
                     </a>
                     <div class="dropdown-menu" ngbDropdownMenu>
-                      <a class="dropdown-item" ngbDropdownItem href="#">OFICINA VIRTUAL</a>
-                      <a class="dropdown-item" ngbDropdownItem href="#">CAMPUS VIRTUAL</a>
-                      <a class="dropdown-item" ngbDropdownItem href="#">MI PAGO</a>
-                      <a class="dropdown-item" ngbDropdownItem href="#">APP COONADOC</a>
-                      <a class="dropdown-item" ngbDropdownItem href="#">PQRSF</a>
+                      <a class="dropdown-item" ngbDropdownItem href="https://srv5.financialsoftware.com.co/OficinaCoonadoc/#/home/">OFICINA VIRTUAL</a>
+                      <a class="dropdown-item" ngbDropdownItem href="https://campus.coonadoc.co/">CAMPUS VIRTUAL</a>
+                      <a class="dropdown-item" ngbDropdownItem href="https://www.mipagoamigo.com/MPA_WebSite/ServicePayments/StartPayment?id=328&searchedCategoryId=&searchedAgreementName=COOPERATIVA%20NACIONAL%20DE%20DOCENTES%20COONADOC">MI PAGO</a>
+                      <a class="dropdown-item" ngbDropdownItem href="https://play.google.com/store/apps/details?id=com.srsappmovil.financial.appcoonadoc&hl=es_419&gl=US&pli=1">APP COONADOC</a>
+                      <a class="dropdown-item" ngbDropdownItem href="https://pqr.coonadoc.co/">PQRSF</a>
                     </div>
                   </li>
                 <li class="nav-item" >
-                    <a href="#footer"  class="btn btn-success btn-round">CONTACTO</a>
+                    <a (click)="irAContacto()"  class="btn btn-success btn-round">CONTACTO</a>
                 </li>
             </ul>
         </div>

@@ -1,0 +1,26 @@
+<div class="page-header section-dark" style="background-image: url('assets/img/fondo13.jpg')">
+    <div class="filter"></div>
+    <div class="content-center">
+        <div class="container">
+            <div class="title-brand">
+                <h1 class="presentation-title">Líneas de Crédito</h1>
+            </div>
+
+            <h2 class="presentation-subtitle text-center">Aquí podrás encontrar los créditos a los que puedes aplicar</h2>
+        </div>
+    </div>
+</div> 
+<div class="creditos-container">
+    <div class="creditos-grid"> 
+      <div class="credito-card" *ngFor="let credito of creditos">
+        <img [src]="credito.imagen" alt="{{ credito.titulo }}">
+        <div class="credito-info">
+          <h3>{{ credito.titulo }}</h3>
+          <p>{{ credito.descripcion }}</p>
+          <a [href]="credito.url" target="_blank">Solicitalo aquí</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer2></app-footer2>

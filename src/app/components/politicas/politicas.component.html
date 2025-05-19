@@ -1,0 +1,21 @@
+<div class="page-header section-dark" style="background-image: url('assets/img/fondo12.jpg')">
+    <div class="filter"></div>
+    <div class="content-center">
+        <div class="container">
+            <div class="title-brand">
+                <h1 class="presentation-title">POLÍTICAS</h1>
+            </div>
+
+            <h2 class="presentation-subtitle text-center">Aquí podrás encontrar las políticas de la empresa</h2>
+        </div>
+    </div>
+</div> 
+<div class="formatos-container">
+    <div class="grid-formatos">
+      <div class="formato-card" *ngFor="let politica of politicas" (click)="abrirPDF(formato.url)">
+        <img [src]="politica.img" [alt]="politica.title" class="formato-img">
+        <h2 class="title">{{ politica.title }}</h2>
+      </div>
+    </div>
+  </div>
+<app-footer2></app-footer2> 

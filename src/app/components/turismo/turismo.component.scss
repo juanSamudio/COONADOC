@@ -1,0 +1,128 @@
+.gallery-container {
+    text-align: center;
+    padding: 1rem;
+  
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+  
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+  
+      @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+      }
+  
+      .thumbnail {
+        cursor: pointer;
+        transition: transform 0.3s;
+        overflow: hidden;
+  
+        &:hover {
+          transform: scale(1.05);
+        }
+  
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+      
+        .modal-content {
+          background-color: #fff;
+          padding: 1rem;
+          border-radius: 10px;
+          position: relative;
+          text-align: center;
+          max-width: 90vw;
+          max-height: 90vh;
+          overflow: auto;
+      
+          .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+            z-index: 3000;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 5px;
+            border-radius: 50%;
+          }
+      
+          .modal-img {
+            max-width: 100%; 
+            max-height: 80vh; 
+            border-radius: 8px;
+            object-fit: contain;
+            margin: auto;
+          }
+      
+          .modal-controls {
+            display: flex;
+            justify-content: space-between;
+            margin: 0.5rem 0;
+      
+            button {
+              background: transparent;
+              border: none;
+              font-size: 2rem;
+              color: #333;
+              cursor: pointer;
+              transition: color 0.2s;
+      
+              &:hover {
+                color: #006400;
+              }
+            }
+          }
+      
+          p {
+            margin: 0.5rem;
+            font-weight: bold;
+            color: #333;
+          }
+        }
+      
+        @media (max-width: 768px) {
+          .modal-content {
+            max-width: 100vw;
+            max-height: 90vh;
+            padding: 0.5rem;
+      
+            .close {
+              top: 5px;
+              right: 5px;
+              font-size: 1.2rem;
+            }
+      
+            .modal-img {
+              max-height: 60vh;
+            }
+      
+            .modal-controls button {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+  }
+  

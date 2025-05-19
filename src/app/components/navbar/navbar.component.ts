@@ -1,5 +1,8 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { ViewportScroller } from '@angular/common';
+
 
 @Component({
     selector: 'app-navbar',
@@ -10,7 +13,7 @@ export class NavbarComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
 
-    constructor(public location: Location, private element : ElementRef) {
+    constructor(private router: Router,public location: Location, private element : ElementRef,private viewportScroller: ViewportScroller) {
         this.sidebarVisible = false;
     }
 
@@ -47,4 +50,17 @@ export class NavbarComponent implements OnInit {
             this.sidebarClose();
         }
     };
+
+    irAContacto(): void {
+        if (this.router.url === '/home') {
+          this.viewportScroller.scrollToAnchor('footer');
+        } else {
+          this.router.navigate(['/home']).then(() => {
+            setTimeout(() => {
+              this.viewportScroller.scrollToAnchor('footer');
+            }, 100); 
+          });
+        }
+      }
+
 }

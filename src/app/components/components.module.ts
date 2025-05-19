@@ -10,6 +10,11 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ComponentsComponent } from './components.component';
 import { FooterComponent } from './footer/footer.component';
 import { StartComponent } from './start/start.component';
+import { Footer2Component } from './footer2/footer2.component';
+import { FormatosComponent } from './formatos/formatos.component';
+import { PoliticasComponent } from './politicas/politicas.component';
+import { CreditosComponent } from './creditos/creditos.component';
+import { TurismoComponent } from './turismo/turismo.component';
 
 @NgModule({
     imports: [
@@ -24,7 +29,12 @@ import { StartComponent } from './start/start.component';
         ComponentsComponent,
         NavigationComponent,
         FooterComponent,
-        StartComponent
+        StartComponent,
+        Footer2Component,
+        FormatosComponent,
+        PoliticasComponent,
+        CreditosComponent,
+        TurismoComponent
     ],
     exports:[ ComponentsComponent ]
 })

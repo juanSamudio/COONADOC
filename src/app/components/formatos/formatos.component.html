@@ -1,0 +1,22 @@
+<div class="page-header section-dark" style="background-image: url('assets/img/fondo123.jpg')">
+    <div class="filter"></div>
+    <div class="content-center">
+        <div class="container">
+            <div class="title-brand">
+                <h1 class="presentation-title">FORMATOS</h1>
+            </div>
+
+            <h2 class="presentation-subtitle text-center">Aquí podrás encontrar los formatos que necesitas para realizar tus trámites de manera más fácil y rápida.</h2>
+        </div>
+    </div>
+</div> 
+<div class="formatos-container">
+    <div class="grid-formatos">
+      <div class="formato-card" *ngFor="let formato of formatos" (click)="abrirPDF(formato.url)">
+        <img [src]="formato.img" [alt]="formato.title" class="formato-img">
+        <h2 class="title">{{ formato.title }}</h2>
+        <p class="formato-description">{{ formato.description }}</p>
+      </div>
+    </div>
+  </div>
+<app-footer2></app-footer2>

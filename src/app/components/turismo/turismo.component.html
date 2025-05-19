@@ -1,0 +1,34 @@
+<div class="page-header section-dark" style="background-image: url('assets/img/fond.jpg')">
+    <div class="filter"></div>
+    <div class="content-center">
+        <div class="container">
+            <div class="title-brand">
+                <h1 class="presentation-title">TURISMO</h1>
+            </div>
+
+            <h2 class="presentation-subtitle text-center">Diviértete con nosotros</h2>
+        </div>
+    </div>
+</div> 
+<div class="gallery-container">
+    <div class="gallery-grid">
+      <div *ngFor="let img of images; let i = index" class="thumbnail" (click)="openModal(i)">
+        <img [src]="img.url" [alt]="img.title">
+      </div>
+    </div>
+  
+    <div class="modal" *ngIf="isModalOpen">
+      <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <img [src]="images[currentImageIndex].url" [alt]="images[currentImageIndex].title" class="modal-img">
+        <div class="modal-controls">
+          <button (click)="prevImage()">&#10094;</button>
+          <button (click)="nextImage()">&#10095;</button>
+        </div>
+        <p>{{ images[currentImageIndex].title }}</p>
+      </div>
+    </div>
+  </div>
+
+  <app-footer2></app-footer2>
+  
