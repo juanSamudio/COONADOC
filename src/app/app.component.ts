@@ -49,4 +49,6 @@ export class AppComponent implements OnInit {
         }
 
     }
+
+    whatsappNumber = '573008328192';
 }

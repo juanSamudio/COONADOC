@@ -34,7 +34,7 @@ import { TurismoComponent } from './turismo/turismo.component';
         FormatosComponent,
         PoliticasComponent,
         CreditosComponent,
-        TurismoComponent
+        TurismoComponent,
     ],
     exports:[ ComponentsComponent ]
 })
